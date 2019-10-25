@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TomatoDetection</string>
+    <string name="error_message">Error Detecting</string>
+    <string name="photo_launcher">Photo Launcher</string>
+    <string name="photo_recognized">Photo Recognized</string>
+    <string name="text_result">Result</string>
+    <string name="detect">Detect</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="gallery">Gallery</string>
+    <string name="log_Out">Log Out</string>
+    <string name="new_post_btn_hint">Post Blog</string>
+    <string name="post_desc_hint">Add Description ...</string>
+</resources>

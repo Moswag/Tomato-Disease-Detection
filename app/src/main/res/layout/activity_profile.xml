@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <!--<Button
+        android:id="@+id/button4"
+        android:layout_width="91dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/button_shape"
+        android:onClick="signOut"
+        android:text="LOG OUT"
+        android:textColor="#FFFF" />-->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="13dp"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button6"
+        android:layout_toEndOf="@+id/button8"
+        android:background="@drawable/button_shape"
+        android:onClick="signOut"
+        android:text="Live Detect"
+        android:textColor="#FFFF" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="130dp"
+        android:layout_marginTop="133dp"
+        android:background="@drawable/button_shape"
+        android:onClick="signOut"
+        android:text="Timeline Detect"
+        android:textColor="#FFFF" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_shape"
+        android:onClick="signOut"
+        android:text="Uploads"
+        android:textColor="#FFFF" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="99dp"
+        android:layout_height="102dp"
+        android:layout_alignTop="@+id/button9"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_shape"
+        android:onClick="signOut"
+        android:text="TimeLine Graph"
+        android:textColor="#FFFF" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginBottom="81dp"
+        android:background="@drawable/button_shape"
+        android:onClick="signOut"
+        android:text="MOnthly Analysis"
+        android:textColor="#FFFF" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="95dp"
+        android:layout_height="106dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/button8"
+        android:layout_marginEnd="19dp"
+        android:background="@drawable/button_shape"
+        android:onClick="signOut"
+        android:text="Similarity Analysis"
+        android:textColor="#FFFF" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/textView"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="0dp"
+        android:text="Welcome" />
+
+</RelativeLayout>
