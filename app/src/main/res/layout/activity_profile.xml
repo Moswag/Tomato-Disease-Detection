@@ -36,7 +36,7 @@
         android:layout_toEndOf="@+id/button8"
         android:background="@drawable/button_shape"
         android:onClick="signOut"
-        android:text="Live Detect"
+        android:text="Camera Detect"
         android:textColor="#FFFF" />
 
     <Button
@@ -48,7 +48,7 @@
         android:layout_marginTop="133dp"
         android:background="@drawable/button_shape"
         android:onClick="signOut"
-        android:text="Timeline Detect"
+        android:text="Image Detect"
         android:textColor="#FFFF" />
 
     <Button
@@ -81,7 +81,7 @@
         android:layout_marginBottom="81dp"
         android:background="@drawable/button_shape"
         android:onClick="signOut"
-        android:text="MOnthly Analysis"
+        android:text="Monthly Analysis"
         android:textColor="#FFFF" />
 
     <Button

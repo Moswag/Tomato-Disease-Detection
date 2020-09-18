@@ -88,7 +88,7 @@ import com.google.firebase.auth.FirebaseUser;
              case R.id.log_out:
                  auth.signOut();
                  finish();
-                 Intent i = new Intent(this,MainActivity.class);
+                 Intent i = new Intent(this,LoginActivity.class);
                  startActivity(i);
                  return true;
              default:
@@ -113,7 +113,7 @@ import com.google.firebase.auth.FirebaseUser;
     {
         auth.signOut();
         finish();
-        Intent i = new Intent(this,MainActivity.class);
+        Intent i = new Intent(this,LoginActivity.class);
         startActivity(i);
 
     }

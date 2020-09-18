@@ -130,7 +130,7 @@ public class DetectActivity extends AppCompatActivity {
             case R.id.log_out:
                 auth.signOut();
                 finish();
-                Intent i = new Intent(this,MainActivity.class);
+                Intent i = new Intent(this,LoginActivity.class);
                 startActivity(i);
                 return true;
             default:
@@ -145,7 +145,6 @@ public class DetectActivity extends AppCompatActivity {
     }
 private void addEvents(){
         btnImportPhoto.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 getPictureFromGallery();
@@ -156,6 +155,7 @@ private void addEvents(){
 
             @Override
             public void onClick(View v) {
+
                 getPictureFromCamera();
             }
         });
@@ -288,19 +288,24 @@ private void addEvents(){
         setMatchView2();
 
         try{
+            //photoView 1
             BitmapDrawable drawable = (BitmapDrawable) photoView.getDrawable();
-            BitmapDrawable drawable1 = (BitmapDrawable) matchView2.getDrawable();
             Bitmap bitmap = drawable.getBitmap();
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+            byte[] data = baos.toByteArray();
+            final String result=Base64.encodeToString(data, Base64.DEFAULT);
+
+            //matchView 2
+            BitmapDrawable drawable1 = (BitmapDrawable) matchView2.getDrawable();
             Bitmap bitmap1 = drawable1.getBitmap();
             //Bitmap bitmap1 = BitmapFactory.decodeFile(String.valueOf(R.drawable.lb));
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
             ByteArrayOutputStream baos1 = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
             bitmap1.compress(Bitmap.CompressFormat.JPEG, 100, baos1);
-            byte[] data = baos.toByteArray();
             byte[] data1 = baos1.toByteArray();
-            final String result=Base64.encodeToString(data, Base64.DEFAULT);
             final String result1=Base64.encodeToString(data1, Base64.DEFAULT);
+
+
             String text = "";
             final ArrayList<LabelProb> labelProbs = classifier.recognizeImage(bitmap);
             if (labelProbs == null) {
@@ -308,7 +313,12 @@ private void addEvents(){
             } else {
                 for (int i = 0; i < 1; ++i) {
                     //text += String.format("%s (Similarity: %.2f) \n", labelProbs.get(i).getLabel(), labelProbs.get(i).getProb());
-                    text += String.format("%.2f confident that this is %s \n",labelProbs.get(i).getProb(), labelProbs.get(i).getLabel());
+                    if(labelProbs.get(i).getLabel().equals("lateblight")) {
+                        text += String.format("%.2f confident that this is %s \n", labelProbs.get(i).getProb(), labelProbs.get(i).getLabel());
+                    }
+                    else{
+                        text += String.format("%.2f confident that this is %s or the application dataset was not trained for this type of image \n", labelProbs.get(i).getProb(), labelProbs.get(i).getLabel());
+                    }
                     if(uri != null){
                         StorageReference fileReference = mStorageRef.child(System.currentTimeMillis()+"."+getFileExtension(uri));
 
@@ -339,6 +349,9 @@ private void addEvents(){
                                         int y2 = 0;
                                         if (text1.toString().trim() == "lateblight" ){
                                             Toast.makeText(DetectActivity.this, "Apply a copper based fungicide every 7 days or less.", Toast.LENGTH_LONG).show();
+                                        }
+                                        else{
+                                            Toast.makeText(DetectActivity.this, text1, Toast.LENGTH_LONG).show();
                                         }
                                         String text2=result;
                                         String text3=result1;

@@ -1,5 +1,6 @@
 package com.example.takundachinyerere.tomatodetection;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -29,7 +30,17 @@ public class LoginActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
     }
 
+    public void registerUser(View view){
+        startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+    }
+
+    ProgressDialog progressBar;
+    private int progressBarStatus = 0;
+    private long fileSize = 0;
+
+
     public void loginUser(View v) {
+
         if (e1.getText().toString().equals("") && e2.getText().toString().equals("")) {
             Toast.makeText(getApplicationContext(), "Blank fields not allowed", Toast.LENGTH_SHORT).show();
         } else {

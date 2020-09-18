@@ -126,7 +126,7 @@ public class LiveActivity extends AppCompatActivity {
             case R.id.log_out:
                 auth.signOut();
                 finish();
-                Intent i = new Intent(this,MainActivity.class);
+                Intent i = new Intent(this,LoginActivity.class);
                 startActivity(i);
                 return true;
             default:
@@ -295,7 +295,12 @@ public class LiveActivity extends AppCompatActivity {
             } else {
                 for (int i = 0; i < 1; ++i) {
                     //text += String.format("%s (Similarity: %.2f) \n", labelProbs.get(i).getLabel(), labelProbs.get(i).getProb());
-                    text += String.format("%.2f confident that this is %s \n",labelProbs.get(i).getProb(), labelProbs.get(i).getLabel());
+                    if(labelProbs.get(i).getLabel().equals("lateblight")) {
+                        text += String.format("%.2f confident that this is %s \n", labelProbs.get(i).getProb(), labelProbs.get(i).getLabel());
+                    }
+                    else{
+                        text += String.format("%.2f confident that this is %s or the application dataset was not trained for this type of image \n", labelProbs.get(i).getProb(), labelProbs.get(i).getLabel());
+                    }
                     if(uri != null){
                         StorageReference fileReference = mStorageRef.child(System.currentTimeMillis()+"."+getFileExtension(uri));
 

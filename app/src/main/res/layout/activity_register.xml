@@ -1,55 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        />
+
+
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="325dp"
-        android:layout_height="71dp"
+        android:id="@+id/name"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="204dp"
-        android:ems="10"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/et_style"
+        android:hint="Enter Name"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/surname"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/et_style"
+        android:hint="Enter Surname"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/et_style"
         android:hint="Enter Email Address"
         android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="326dp"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="226dp"
-        android:ems="10"
+        android:layout_gravity="center"
+        android:background="@drawable/et_style"
         android:hint="Enter Password"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="133dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="131dp"
+        android:layout_width="306dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button_bg_rounded_corners"
         android:onClick="createUser"
         android:text="REGISTER"
         android:textColor="#FFFF" />
 
+
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/gotoLogin"
         android:layout_width="296dp"
         android:layout_height="68dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:text="Tomato Disease Detection and Prediction System"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Already registered? Goto Login"
         android:textAlignment="center"
-        android:textColor="#33B35A"
-        android:textSize="25dp" />
+        android:textColor="#4c4cf2"
+        android:textSize="15dp" />
+    </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>

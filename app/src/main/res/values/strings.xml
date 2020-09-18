@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TomatoDetection</string>
+    <string name="app_name">Plant Disease Detection</string>
     <string name="error_message">Error Detecting</string>
     <string name="photo_launcher">Photo Launcher</string>
     <string name="photo_recognized">Photo Recognized</string>

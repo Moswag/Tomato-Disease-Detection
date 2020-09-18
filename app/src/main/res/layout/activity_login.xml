@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,50 +7,65 @@
     tools:context=".LoginActivity">
 
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        />
+
+
     <EditText
         android:id="@+id/editText"
-        android:layout_width="307dp"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="183dp"
-        android:ems="10"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/et_style"
         android:hint="Enter Email Address"
         android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="306dp"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="242dp"
-        android:ems="10"
+        android:layout_gravity="center"
+        android:background="@drawable/et_style"
         android:hint="Enter Password"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="154dp"
+        android:layout_width="306dp"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="142dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button_bg_rounded_corners"
         android:onClick="loginUser"
         android:text="LOG IN"
         android:textColor="#FFFF" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="296dp"
-        android:layout_height="68dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:text="Tomato Disease Detection and Prediction System"
-        android:textAlignment="center"
-        android:textColor="#33B35A"
-        android:textSize="25dp" />
+    <Button
+        android:id="@+id/register"
+        android:layout_width="306dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:onClick="registerUser"
+        android:text="Register"
+        android:textColor="#FFFF" />
 
-</RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,52 +1,37 @@
 {
   "project_info": {
-    "project_number": "593509714572",
-    "firebase_url": "https://tomatodetection.firebaseio.com",
-    "project_id": "tomatodetection",
-    "storage_bucket": "tomatodetection.appspot.com"
+    "project_number": "340771169559",
+    "firebase_url": "https://tomatodisease-1a746.firebaseio.com",
+    "project_id": "tomatodisease-1a746",
+    "storage_bucket": "tomatodisease-1a746.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:593509714572:android:f5d24042b093a4d9",
+        "mobilesdk_app_id": "1:340771169559:android:8bc390a828ec2c540d0352",
         "android_client_info": {
           "package_name": "com.example.takundachinyerere.tomatodetection"
         }
       },
       "oauth_client": [
         {
-          "client_id": "593509714572-n8b2eklpqnfthrhdfjcn0lnunoeovshu.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.takundachinyerere.tomatodetection",
-            "certificate_hash": "99689bfc79b21ac251c2bfdaa0786d53175120ef"
-          }
-        },
-        {
-          "client_id": "593509714572-a66grr1murgd9odl4fje0i344vjjkjj9.apps.googleusercontent.com",
+          "client_id": "340771169559-nqtpuiincg7e9ntqmm2usajr20bpgsmk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDxFaaOpDmCX-1HE2mFZdqkvfgIKTJJI9g"
+          "current_key": "AIzaSyBV9F6IJk-suOt9epLyEQbk-BtcF2XNTGU"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "593509714572-a66grr1murgd9odl4fje0i344vjjkjj9.apps.googleusercontent.com",
+              "client_id": "340771169559-nqtpuiincg7e9ntqmm2usajr20bpgsmk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

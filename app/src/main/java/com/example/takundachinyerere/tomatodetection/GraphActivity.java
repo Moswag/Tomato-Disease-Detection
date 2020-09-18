@@ -81,7 +81,7 @@ public class GraphActivity extends AppCompatActivity {
             case R.id.log_out:
                 auth.signOut();
                 finish();
-                Intent i = new Intent(this,MainActivity.class);
+                Intent i = new Intent(this,LoginActivity.class);
                 startActivity(i);
                 return true;
             default:

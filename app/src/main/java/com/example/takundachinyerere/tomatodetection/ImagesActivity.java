@@ -95,7 +95,7 @@ public class ImagesActivity extends AppCompatActivity implements ImageAdapter.On
             case R.id.log_out:
                 auth.signOut();
                 finish();
-                Intent i = new Intent(this,MainActivity.class);
+                Intent i = new Intent(this,LoginActivity.class);
                 startActivity(i);
                 return true;
             default:
